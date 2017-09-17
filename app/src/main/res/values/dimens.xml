@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="input_label_padding_top">16dp</dimen>
+    <dimen name="input_label_padding_bottom">8dp</dimen>
+    <dimen name="input_label_padding_horizontal">8dp</dimen>
+    <dimen name="button_touch_target">48dp</dimen>
+    <dimen name="button_padding">8dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_min_width">64dp</dimen>
 </resources>

@@ -2,7 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+    
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/assignment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -12,20 +25,118 @@
         android:paddingRight="@dimen/input_label_padding_horizontal"
         android:paddingTop="@dimen/input_label_padding_top">
 
-        <EditText
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/assignment_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_assignment_title" />
+            android:hint="@string/hint_assignment_title"
+            android:maxLines="1"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/input_label_padding_bottom"
+        android:paddingLeft="@dimen/input_label_padding_horizontal"
+        android:paddingRight="@dimen/input_label_padding_horizontal"
+        android:paddingTop="@dimen/input_label_padding_top">
+
+        <!--TODO: Default text for day selected in code-->
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/button_touch_target" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_start_date"
+                android:textSize="@dimen/label_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_start_time"
+                android:textSize="@dimen/label_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/input_label_padding_bottom">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="September 18, 2018"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:00 PM"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/input_label_padding_bottom"
+        android:paddingLeft="@dimen/input_label_padding_horizontal"
+        android:paddingRight="@dimen/input_label_padding_horizontal"
+        android:paddingTop="@dimen/input_label_padding_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_due_date"
+                android:textSize="@dimen/label_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_due_time"
+                android:textSize="@dimen/label_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/input_label_padding_bottom">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="September 19, 2018"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:00 PM"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
